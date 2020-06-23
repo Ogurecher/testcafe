@@ -34,6 +34,7 @@ export default {
     clientScriptsWithEmptyContent:      'The client script you tried to inject is empty.',
     clientScriptsWithDuplicatedContent: 'You injected the following client script{suffix} several times:\n {duplicatedScripts}',
     assertedSelectorInstance:           'You passed a Selector object to \'t.expect()\'.\nIf you want to check that a matched element exists, pass the \'selector.exists\' value instead.',
-    assertedClientFunctionInstance:     'You passed a ClientFunction object to \'t.expect()\'.\nIf you want to check the function\'s return value, call the client function (\'clientFunction()\') instead.'
+    assertedClientFunctionInstance:     'You passed a ClientFunction object to \'t.expect()\'.\nIf you want to check the function\'s return value, call the client function (\'clientFunction()\') instead.',
+    redundantAwaitInAssertion:          'You are using a DOM snapshot property in your assertion. Its value is set when \'await Selector(...)\' is resolved and it won\'t be updated if the element\'s state changes. If it wasn\'t intentional, try using Selector without await.'
 };
 
