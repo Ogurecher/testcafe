@@ -127,6 +127,11 @@ export default class TestRun extends AsyncEventEmitter {
 
         this.debugLogger = this.opts.debugLogger;
 
+        this.observedCallsites = {
+            callsitesWithoutAwait:     new Set(),
+            snapshotPropertyCallsites: new Set()
+        };
+
         this._addInjectables();
         this._initRequestHooks();
     }
